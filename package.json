@@ -16,6 +16,7 @@
     "@subsquid/graphql-server": "3.2.4",
     "@subsquid/typeorm-migration": "0.1.4",
     "@subsquid/typeorm-store": "0.1.5",
+    "axios": "^1.2.1",
     "dotenv": "^16.0.0",
     "ethers": "^5.6.4",
     "pg": "^8.7.3",
