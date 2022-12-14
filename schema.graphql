@@ -1,0 +1,5 @@
+type MyEntity @entity {
+  id: ID!
+  foo: String!
+}
+
