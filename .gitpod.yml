@@ -25,8 +25,7 @@ tasks:
   - name: DB
     command: |
       gp sync-await setup
-      sqd up
-      sqd migrate
+      npx sqd up
       gp sync-done db
   - name: GraphQL API
     command: |
