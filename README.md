@@ -14,7 +14,7 @@
 
 <div align="center">
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/RaekwonIII/fantom-workshop.git)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/RaekwonIII/fantom-workshop.git#ens-workshop)
 
 </div>
 
