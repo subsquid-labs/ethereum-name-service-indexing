@@ -12,7 +12,6 @@ type Token @entity {
 type Owner @entity {
   id: ID!
   ownedTokens: [Token!] @derivedFrom(field: "owner")
-  ownedTokens: [Token!] @derivedFrom(field: "owner")
 }
 
 type Contract @entity {
@@ -22,23 +21,7 @@ type Contract @entity {
   totalSupply: BigInt!
   tokens: [Token!]! @derivedFrom(field: "contract")
 }
-type Contract @entity {
-  id: ID!
-  name: String! @index
-  symbol: String!
-  totalSupply: BigInt!
-  tokens: [Token!]! @derivedFrom(field: "contract")
-}
 
-type Transfer @entity {
-  id: ID!
-  token: Token!
-  from: Owner
-  to: Owner
-  timestamp: BigInt!
-  block: Int! @index
-  transactionHash: String!
-}
 type Transfer @entity {
   id: ID!
   token: Token!
