@@ -28,7 +28,20 @@ The contract information (name, symbol, total supply) is hard-coded, because the
 
 The project is relatively simple, because its purpose is purely demonstrative. Its intent is to showcase the capabilities of Subsquid SDK.
 
-### What is a Squid?
+That being said, 
+
+> How do I obtain the name and image of an ENS token? Let's say I want to see [the image Vitalik Buterin](https://opensea.io/assets/ethereum/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/79233663829379634837589865448569342784712482819484549289560981379859480642508) has associated with `vitalik.eth`...
+
+![GraphQL playground](assets/graphql-playground.png)
+
+And the `imageURL` corresponds to:
+
+<p align="center">
+	<img src="https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0xaf2caa1c2ca1d027f1ac823b529d0a67cd144264b2789fa2ea4d63a67c7103cc/image">
+</p>
+
+
+## What is a Squid?
 
 > A squid is a project that extracts and transforms on-chain data in order to present it as a GraphQL API. Squids are developed using the Subsquid SDK, which provides extensive tooling to define data schemas, data transfomation rules, and the shape of the resulting API.
 
