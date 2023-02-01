@@ -30,7 +30,11 @@ The project is relatively simple, because its purpose is purely demonstrative. I
 
 That being said, 
 
-> How do I obtain the name and image of an ENS token? Let's say I want to see [the image Vitalik Buterin](https://opensea.io/assets/ethereum/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/79233663829379634837589865448569342784712482819484549289560981379859480642508) has associated with `vitalik.eth`...
+> What if I am monitoring Vitalik's wallet on-chain activity, and he's minted an NFT token.
+> 
+> At this point, I only have the token ID, what if I want to know the name (spoiler alert: `vitalik.eth`), and the [eventual image](https://opensea.io/assets/ethereum/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/79233663829379634837589865448569342784712482819484549289560981379859480642508) he's associated with the domain?
+>
+> And  what if I'm monitoring multiple wallets or the entire network? You need a more scalable solution than polling ENS metadata API...
 
 ![GraphQL playground](assets/graphql-playground.png)
 
