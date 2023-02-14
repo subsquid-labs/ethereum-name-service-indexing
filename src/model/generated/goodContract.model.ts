@@ -3,8 +3,8 @@ import * as marshal from "./marshal"
 import {Token} from "./token.model"
 
 @Entity_()
-export class Contract {
-    constructor(props?: Partial<Contract>) {
+export class GoodContract {
+    constructor(props?: Partial<GoodContract>) {
         Object.assign(this, props)
     }
 
@@ -23,4 +23,7 @@ export class Contract {
 
     @OneToMany_(() => Token, e => e.contract)
     tokens!: Token[]
+
+    @Column_("numeric", {transformer: marshal.bigintTransformer, nullable: true})
+    numberField!: bigint | undefined | null
 }

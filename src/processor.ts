@@ -5,7 +5,7 @@ import {
   LogHandlerContext,
 } from "@subsquid/evm-processor";
 import { events, Contract as ContractAPI } from "./abi/ens";
-import { Contract, Owner, Token, Transfer } from "./model";
+import { BadContract, GoodContract, Owner, Token, Transfer } from "./model";
 import { In } from "typeorm";
 import axios from "axios";
 
@@ -77,21 +77,31 @@ processor.run(new TypeormDatabase(), async (ctx) => {
   );
 });
 
-let contractEntity: Contract | undefined;
+let contractEntity: GoodContract | undefined;
 
 export async function getOrCreateContractEntity(
   store: Store
-): Promise<Contract> {
+): Promise<GoodContract> {
   if (contractEntity == null) {
-    contractEntity = await store.get(Contract, contractAddress);
+    contractEntity = await store.get(GoodContract, contractAddress);
     if (contractEntity == null) {
-      contractEntity = new Contract({
+      contractEntity = new GoodContract({
         id: contractAddress,
         name: "Ethereum Name Service",
         symbol: "ENS",
         totalSupply: 0n,
+        numberField: 0n,
+      });
+
+      const badContractEntity = new BadContract({
+        id: contractAddress,
+        name: "Ethereum Name Service",
+        symbol: "ENS",
+        totalSupply: 0n,
+        customField: "asd"
       });
       await store.insert(contractEntity);
+      await store.insert(badContractEntity);
     }
   }
   return contractEntity;

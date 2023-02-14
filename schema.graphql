@@ -6,7 +6,7 @@ type Token @entity {
   uri: String
   expires: BigInt,
   transfers: [Transfer!]! @derivedFrom(field: "token")
-  contract: Contract
+  contract: GoodContract
 }
 
 type Owner @entity {
@@ -14,13 +14,26 @@ type Owner @entity {
   ownedTokens: [Token!] @derivedFrom(field: "owner")
 }
 
-type Contract @entity {
+type GoodContract @entity {
   id: ID!
   name: String! @index
   symbol: String!
   totalSupply: BigInt!
   tokens: [Token!]! @derivedFrom(field: "contract")
+  numberField: BigInt
 }
+
+type BadContract @entity {
+  id: ID!
+  name: String! @index
+  symbol: String!
+  totalSupply: BigInt!
+  # tokens: [Token!]! @derivedFrom(field: "contract")
+  customField: String
+}
+
+union Contract = GoodContract | BadContract
+
 
 type Transfer @entity {
   id: ID!

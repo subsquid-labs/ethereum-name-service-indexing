@@ -2,7 +2,7 @@ import {Entity as Entity_, Column as Column_, PrimaryColumn as PrimaryColumn_, M
 import * as marshal from "./marshal"
 import {Owner} from "./owner.model"
 import {Transfer} from "./transfer.model"
-import {Contract} from "./contract.model"
+import {GoodContract} from "./goodContract.model"
 
 @Entity_()
 export class Token {
@@ -33,6 +33,6 @@ export class Token {
     transfers!: Transfer[]
 
     @Index_()
-    @ManyToOne_(() => Contract, {nullable: true})
-    contract!: Contract | undefined | null
+    @ManyToOne_(() => GoodContract, {nullable: true})
+    contract!: GoodContract | undefined | null
 }
