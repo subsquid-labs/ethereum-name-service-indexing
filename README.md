@@ -40,9 +40,7 @@ That being said,
 
 And the `imageURL` corresponds to:
 
-<p align="center">
-	<img src="https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0xaf2caa1c2ca1d027f1ac823b529d0a67cd144264b2789fa2ea4d63a67c7103cc/image">
-</p>
+![V nyan cat](https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0xaf2caa1c2ca1d027f1ac823b529d0a67cd144264b2789fa2ea4d63a67c7103cc/image)
 
 
 ## What is a Squid?
